@@ -38,6 +38,7 @@ Scenario: Create a Product
     And I should see "True" in the "Available" dropdown
     And I should see "Tools" in the "Category" dropdown
     And I should see "34.95" in the "Price" field
+    
 Scenario: Read a Product
     When I visit the "Home Page"
     And I set the "Name" to "Hat"
@@ -53,6 +54,7 @@ Scenario: Read a Product
     And I should see "True" in the "Available" dropdown
     And I should see "Cloths" in the "Category" dropdown
     And I should see "59.95" in the "Price" field
+
 Scenario: Update a Product
     When I visit the "Home Page"
     And I set the "Name" to "Hat"
@@ -89,6 +91,7 @@ Scenario: Delete a Product
     And I press the "Search" button
     Then I should see the message "Success"
     And I should not see "Hat" in the results
+
 Scenario: List all products
     When I visit the "Home Page"
     And I press the "Clear" button
@@ -98,6 +101,7 @@ Scenario: List all products
     And I should see "Shoes" in the results
     And I should see "Big Mac" in the results
     And I should see "Sheets" in the results
+
 Scenario: Search by category
     When I visit the "Home Page"
     And I press the "Clear" button
@@ -108,6 +112,7 @@ Scenario: Search by category
     And I should not see "Hat" in the results
     And I should not see "Shoes" in the results
     And I should not see "Sheets" in the results
+
 Scenario: Search by available
     When I visit the "Home Page"
     And I press the "Clear" button
@@ -118,6 +123,7 @@ Scenario: Search by available
     And I should see "Big Mac" in the results
     And I should see "Sheets" in the results
     And I should not see "Shoes" in the results
+
 Scenario: Search by name
     When I visit the "Home Page"
     And I set the "Name" to "Hat"
